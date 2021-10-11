@@ -1,6 +1,11 @@
 {
   "name": "oscarprince",
-  "version": "0.0.0",
+  "version": "0.1.0-dev",
+  "contributors": [{
+    "name": "Oscar Prince",
+    "email": "oscar@oscarprince.ch",
+    "url": "https://oscarprince.ch"
+  }],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
