@@ -1,0 +1,19 @@
+:host {
+    nav {
+        .nav-links {
+            justify-content: center;
+            display: flex;
+            margin: 20px 0;
+
+            div {
+                padding: 2px 5px;
+                
+                &:hover {
+                    background-color: #ba0000;
+                    cursor: pointer;
+                    border-radius: 2px;
+                }
+            }
+        }
+    }
+}
