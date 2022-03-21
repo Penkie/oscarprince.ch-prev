@@ -1,8 +1,8 @@
 <nav>
     <div class="nav-links">
-        <div routerLink="">Home</div>
-        <div routerLink="/projects">Projets</div>
-        <div routerLink="/contact">Contact</div>
+        <div [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" routerLink="/">Home</div>
+        <div routerLinkActive="active" routerLink="/projects">Projets</div>
+        <div routerLinkActive="active" routerLink="/contact">Contact</div>
     </div>
 </nav>
 <div class="page-content">

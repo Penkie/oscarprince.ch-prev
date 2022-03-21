@@ -1,6 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --background: rgb(17, 17, 17);
+    --background-hover: rgb(49, 49, 49);
+    --border-radius: 8px;
+}
+
 html body {
     font-family: 'Noto Sans Mono', monospace;
-    background-color: black;
-    color: white;
+    background-color: var(--background);
+    color: rgb(245, 245, 245);
+    padding: 0;
+    margin: 0;
 }
