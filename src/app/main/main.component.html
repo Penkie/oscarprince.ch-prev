@@ -1,6 +1,10 @@
+<div [style.background-color]="selectedColor" class="color-bar"></div>
 <nav>
+    <div class="logo">
+        <span>Oscar Prince</span>
+    </div>
     <div class="nav-links">
-        <div [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" routerLink="/">Home</div>
+        <div [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" routerLink="/">Accueil</div>
         <div routerLinkActive="active" routerLink="/projects">Projets</div>
         <div routerLinkActive="active" routerLink="/contact">Contact</div>
     </div>
