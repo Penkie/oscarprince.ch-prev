@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -18,21 +18,21 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
     this.selectedColor = this.selectNewColor();
 
-    this.router.events.subscribe(() => {
-      this.selectedColor = this.selectNewColor();
+    this.router.events.subscribe((val) => {
+      if (val instanceof NavigationEnd) {
+        this.selectedColor = this.selectNewColor();
+      }
     });
   }
 
   public selectNewColor(): string {
-    const oldColor = this.selectedColor;
+    return this.colors[this.findNewColorIndex()];
+  }
 
-    const newColor = this.colors[Math.floor(Math.random() * this.colors.length )];
-
-    if (newColor === oldColor) {
-      return this.selectNewColor();
-    } else {
-      return newColor;
-    }
+  public findNewColorIndex(): number {
+    const findColorIndex = this.colors.findIndex((e) => e === this.selectedColor);
+    const randomNewIndex = Math.floor(Math.random() * this.colors.length);
+    return randomNewIndex === findColorIndex ? this.findNewColorIndex() : randomNewIndex;
   }
 
 }
