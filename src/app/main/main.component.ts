@@ -17,10 +17,22 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
     this.selectedColor = this.selectNewColor();
+
+    this.router.events.subscribe(() => {
+      this.selectedColor = this.selectNewColor();
+    });
   }
 
   public selectNewColor(): string {
-    return this.colors[Math.floor(Math.random() * this.colors.length )];
+    const oldColor = this.selectedColor;
+
+    const newColor = this.colors[Math.floor(Math.random() * this.colors.length )];
+
+    if (newColor === oldColor) {
+      return this.selectNewColor();
+    } else {
+      return newColor;
+    }
   }
 
 }
