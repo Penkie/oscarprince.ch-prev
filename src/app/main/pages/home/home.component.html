@@ -17,13 +17,14 @@
 <div class="secondary-content">
     <div class="content main-wrapper">
         <h2>Projets à la une</h2>
-        <span class="sub-title">Mes derniers projets auxquels je travaille toujours</span>
+        <span class="sub-title">Mes derniers projets actifs</span>
         <div class="featured-projects">
             <div class="project" *ngFor="let project of projects">
                 <div class="logo"><img [src]="project.image"></div>
                 <div class="content">
                     <div class="title">{{ project.name }}</div>
                     <div class="description">{{ project.description }}</div>
+                    <div class="status">Statut • <span [class.online]="project.status" [class.stopped]="!project.status">{{ project.status ? 'EN LIGNE' : 'ARRÊTÉ' }}</span></div>
                 </div>
             </div>
         </div>
