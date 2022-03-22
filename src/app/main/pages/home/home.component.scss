@@ -34,4 +34,23 @@
             }
         }
     }
+
+    .featured-projects {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        
+        .project {
+            width: 100%;
+            background-color: grey;
+        }
+    }
+
+    .seperation {
+        height: 150px;
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        left: 0;
+    }
 }

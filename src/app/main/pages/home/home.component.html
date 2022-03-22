@@ -11,3 +11,9 @@
         <li href="mailto:oscar@oscarprince.ch"><img src="assets/icons/email.svg" alt="email"></li>
     </ul>
 </div>
+<!-- <div class="seperation"><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C150.00,150.00 442.15,24.17 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgb(14, 14, 14);"></path></svg></div> -->
+<div class="featured-projects">
+    <div class="project" *ngFor="let project of projects">
+        {{ project.name }}
+    </div>
+</div>
