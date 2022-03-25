@@ -50,6 +50,10 @@
         height: 100px;
     }
 
+    .inverted {
+        transform: scaleX(-1) scaleY(-1);
+    }
+
     .content {
         h2 {
             margin: 0;
