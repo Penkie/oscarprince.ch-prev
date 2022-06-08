@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Project } from '../common/models/project.model';
+import { ColorService } from '../common/services/color.service';
 
 @Component({
   selector: 'app-main',
@@ -14,17 +15,20 @@ export class MainComponent implements OnInit {
   public projects: Project[] | undefined;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private colorService: ColorService
   ) { }
 
   ngOnInit(): void {
     // À l'initialisation on sélectionne une couleur, car par défaut c'est un string vide
     this.selectedColor = this.selectNewColor();
+    this.colorService.setColor(this.selectedColor);
 
     // Au changement de route on va changer la couleur
     this.router.events.subscribe((val) => {
       if (val instanceof NavigationEnd) {
         this.selectedColor = this.selectNewColor();
+        this.colorService.setColor(this.selectedColor);
       }
     });
   }

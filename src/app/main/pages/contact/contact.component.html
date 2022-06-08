@@ -1,3 +1,23 @@
 <div class="wrapper">
-    <p>contact works!</p>
+    <h1>Contactez-moi !</h1>
+    <div class="form">
+        <form>
+            <div class="infos">
+                <div class="input right">
+                    <label for="email">E-mail</label>
+                    <input placeholder="Votre email" type="email" name="email" id="email">
+                </div>
+                <div class="input">
+                    <label for="nom">Nom</label>
+                    <input placeholder="Votre nom" type="nom" name="nom" id="nom">
+                </div>
+            </div>
+            <div class="input top">
+                <label for="message">Message</label>
+                <textarea placeholder="Dites-moi tout" name="message" id="message" cols="30" rows="10"></textarea>
+            </div>
+            <button [style.background-color]="color" class="top" type="submit">Envoyer</button>
+        </form>
+        <div></div>
+    </div>
 </div>

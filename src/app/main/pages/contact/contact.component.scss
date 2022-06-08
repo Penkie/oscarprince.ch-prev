@@ -3,4 +3,49 @@
         max-width: 1090px;
         margin: 0 auto;
     }
+
+    .form {
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+
+            .infos {
+                display: flex;
+                width: 100%;
+            }
+
+            .input {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            input, textarea {
+                background-color: var(--background-hover);
+                border: 1px solid rgb(102, 102, 102);
+                border-radius: var(--border-radius);
+                font-size: 16px;
+                padding: 10px 15px;
+                color: white;
+            }
+
+            .top {
+                margin-top: 15px;
+            }
+
+            .right {
+                margin-right: 15px;
+            }
+
+            button {
+                padding: 10px 15px;
+                border-radius: var(--border-radius);
+                border: none;
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        }
+    }
 }
