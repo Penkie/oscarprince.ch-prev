@@ -5,6 +5,9 @@
     }
 
     .form {
+        display: flex;
+        align-items: center;
+
         form {
             display: flex;
             flex-direction: column;
@@ -47,5 +50,11 @@
                 cursor: pointer;
             }
         }
+    }
+
+    .image {
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 }
